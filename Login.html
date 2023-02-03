@@ -1,0 +1,201 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Form</title>
+    
+    <style>
+    *{
+      font-family: "Algerian";
+    }
+  body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-size: cover;
+  cursor: default;
+}
+.contactForm
+{
+    width: 40%;
+    padding: 40px;
+    background:black;
+    border-radius: 25px;
+  margin: 0 auto;
+  margin-top: 10%;
+  border: 3px solid deepskyblue;
+}
+.contactForm h2
+{
+   
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 25px;
+  padding: 13px 0;
+  color:white;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+.contactForm .inputBox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+    color:white;
+  background-color: transparent;
+}
+.contactForm .inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.2s;
+    color: deepskyblue;
+}
+.btn{
+  width: 100%;
+  background: none;
+  border: 2px solid deepskyblue;
+  color: deepskyblue;
+  padding: 1%;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 12px 0;
+  margin-bottom: 0.4%;
+  border-radius:25px;
+}
+.btn:hover{
+  transition: 0.4s;
+  width: 100%;
+  background: black;
+  border: 2px solid deepskyblue;
+  color: deepskyblue;
+  cursor: pointer;
+  margin: 12px 0;
+  margin-bottom: 0.4%;
+  border-radius:25px;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+.vid-bg{
+     position:fixed;
+      right: 0;
+      bottom: 0;
+      min-height: 100%;
+      min-width: 100%;
+      z-index: -1;
+    }
+
+
+.glow {
+  margin-top: auto;
+  float: left;
+  font-size: 40px;
+  padding: 13px 0;
+  color:white;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px deepskyblue, 0 0 40px deepskyblue, 0 0 50px deepskyblue, 0 0 60px deepskyblue, 0 0 70px deepskyblue;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px skyblue, 0 0 40px skyblue, 0 0 50px skyblue, 0 0 60px skyblue, 0 0 70px skyblue, 0 0 80px skyblue;
+  }
+}
+  span
+      {
+        transform: translateY(-30px); 
+  animation: glow 1s ease-in-out infinite alternate;
+      }
+    </style>
+    <script>
+    function validform()
+    {
+      var email=document.getElementById("nmael");
+      var pass=document.getElementById("passl");
+      var valid=true;
+      var filtration=/^([a-z A-Z 0-9_\.-]+)@(([a-z A-Z 0-9\-])+).([a-z A-Z0-9] {2,8})?$/;
+       if((filtration.test(email.value)) || (email.value.trim()==""))
+        {
+          email.style="color:red;";
+        }
+      else
+      {
+          email.style="color :green;";
+      }
+      if(pass.value.trim()=="" )
+        {
+          pass.style="border-bottom:1px solid red";
+          pass.placeholder="Incorrect password";
+          valid= false;
+        }
+      else
+      {
+          pass.style="border-bottom:1px solid green";
+      }
+      if(!valid)
+        {
+          alert("Enter the details correctly");
+        }
+      return valid;
+      
+    }
+      
+      function logv()
+      {
+        document.getElementById("visbl").style="visibility:visible"; 
+      }
+      
+      function validname()
+      {
+        var email=document.getElementById("namel");
+       const pattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+                if(email.value.match(pattern))
+                         email.style="color:lime;";
+                else
+                       email.style="color:#ff3300;";
+      }
+    </script>
+    
+  </head>
+  <body>
+    <video src="PixelFiles/Videos/planedot.mp4"  class="vid-bg" autoplay loop muted></video>
+ <div class="contactForm">
+                <form action="Loginphp.php" method="post">
+                    <h2>Login</h2>
+                    <div class="inputBox">
+                        <input type="text" required="required" id="namel" name="namel" onkeypress="validname();">
+                        <span>Mail</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" required="required" name="passl" onkeypress="logv();">
+                        <span>password</span>
+                    </div>
+   <button type="submit" class="btn" id="visbl" style="visibility:hidden">Login</button>
+   </form>
+   <a href="Registration.html"><button class="btn">No Account</button></a>
+            </div>
+  
+  
+  
+  </body>
+  
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"rel="stylesheet">
+  <title>Our Team Section</title>
+  <style>
+    *{
+      font-family: "Algerian";
+    }
+ @import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  cursor: default;
+}
+.wrapper{
+  margin-top: 5%;
+}
+h1{
+  color :white;
+  font-size: 52px;
+  margin-bottom: 60px;
+}
+.team{
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.team .team_member{
+  background:rgba(0,0,0,0.6);
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: white;  
+  position: relative;
+  border: 2px solid deepskyblue;
+  border-radius: 25px;
+}
+.team .team_member:hover{
+  background:black;
+  cursor: default;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: white;  
+  position: relative;
+  border: 1px solid white;
+  border-radius: 25px;
+  border: 2px solid deepskyblue;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.team .team_member h3{
+  color: #81c644;
+  font-size: 26px;
+  margin-top: 50px;
+  color:white;
+  text-transform: capitalize;
+  font-weight: bold;
+  padding: 13px 0;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.team .team_member p.role{
+  color: #ccc;
+  margin: 12px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.team .team_member .team_img{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.team .team_member .team_img img{
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border-radius:50%;
+}
+.floatit img{
+ float:right;
+  left: 0%;
+  padding: 5%;
+    }
+
+    
+.vid-bg{
+     position:fixed;
+      right: 0;
+      bottom: 0;
+      min-height: 100%;
+      min-width: 100%;
+    }
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px deepskyblue, 0 0 20px deepskyblue;
+  }
+  
+  to {
+    text-shadow: 0 0 20px skyblue, 0 0 30px skyblue;
+  }
+}
+
+  </style>
+</head>
+<body>
+ <video src="PixelFiles/Videos/planedot.mp4"  class="vid-bg" autoplay loop muted></video>
+  <h1>Our Team</h1>
+<div class="wrapper">
+  <div class="team">
+    <div class="team_member">
+      <div class="team_img">
+        <img src="PixelFiles/Images/default.jpg" alt="Team_image">
+      </div>
+      <h3 class="glow">Sathwik </h3>
+      <p class="role">Backend developer</p>
+      <p>19001-CM-227</p>
+      <p>Studying in masabtank hyd</p>
+      <center><div class="floatit">
+        <img src=""/>
+        <img src=""/>
+        <img src=""/>
+        </div></center>
+    </div>
+     <div class="team_member">
+      <div class="team_img">
+        <img src="PixelFiles/Images/back1.jpg" alt="Team_image">
+      </div>
+      <h3>Akash</h3>
+      <p class="role">Frontend developer</p>
+      <p>19001-CM-001</p>
+      <p>Studying in masabtank hyd</p>
+    </div>
+     <div class="team_member">
+      <div class="team_img">
+        <img src="PixelFiles/Images/default.jpg" alt="Team_image">
+      </div>
+      <h3>Nikhil</h3>
+      <p class="role">Webpage Animation developer</p
+      <p>19001-CM-223</p>
+      <p>Studying in masabtank hyd</p>
+    </div>
+    <div class="team_member">
+      <div class="team_img">
+        <img src="PixelFiles/Images/back.png" alt="Team_image">
+      </div>
+      <h3>Shiva</h3>
+      <p class="role">Frontend Developer</p>
+      <p>19001-CM-259</p>
+      <p>Studying in masabtank hyd</p></div>
+    <div class="team_member">
+      <div class="team_img">
+        <img src="PixelFiles/Images/sai.jpg" alt="Team_image">
+      </div>
+      <h3>Sai Krishna </h3>
+      <p class="role">webpage Supporter</p>
+      <p>19001-CM-222</p>
+      <p>Studying in masabtank hyd</p>
+    </div>
+  </div>
+</div>	
+</body>
+</html>

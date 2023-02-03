@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Login Error</title>
+<style>
+    *{
+      font-family: "Algerian";
+    }
+  body
+  {
+    cursor: default;
+  }
+.btn{
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 1%;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 4%;
+  margin-bottom: 0;
+  border-radius:25px;
+  justify-content: center;
+}
+.btn:hover{
+  transition: 0.2s;
+  font-size: 30;
+  background: rgba(0,0,0,0.6);
+  border: 2px solid deepskyblue;
+  color: deepskyblue;
+  cursor: pointer;
+  margin-bottom: 0.4%;
+  border-radius:25px;
+}
+  .vid-bg{
+     position:fixed;
+      right: 0;
+      bottom: 0;
+      min-height: 100%;
+      min-width: 100%;
+      z-index: -1;
+    }
+.headtxt
+  {
+    color: deepskyblue;
+    font-size: 35;
+    
+  }
+  .sec
+  {
+    background-color: rgba(0,0,0,0.6);
+    padding: 5%;
+    border: 2px solid deepskyblue;
+    border-radius: 25px;
+    height: 100%;
+    
+  }
+
+</style>
+  </head>
+<body> 
+  <div class="sec">
+  <video src="PixelFiles/Videos/planedot.mp4"  class="vid-bg" autoplay loop muted></video>
+  <center class="headtxt"><h2>Invalid Email or Password</h2></center>
+  <center><a href="Login.html"><button type="button" class="btn">Re Login</button></a></center>
+    <center><a href="Registration.html"><button type="button" class="btn">Register with new account</button></a></center></div>
+  </body>
+</html>

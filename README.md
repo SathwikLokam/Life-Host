@@ -52,7 +52,7 @@ To run **Life-Host** locally, follow the steps below:
   $servername = "localhost";
   $username = "root";
   $password = "";
-  $dbname = "life_host";  // Database name
+  $dbname = "maindatabase";  // Database name
   ```
 
 ### 5. Run the Application

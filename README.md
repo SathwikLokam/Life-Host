@@ -13,7 +13,7 @@
 ## Technologies Used
 
 - **PHP**: Server-side scripting for dynamic functionality and form handling.
-- **MySQL**: Database management system to store campaigns, donors, and donations.
+- **MySQL**: Database management system to store detail.
 - **HTML/CSS**: Front-end technologies used to structure and style the user interface.
 - **JavaScript**: For interactive features, form validation, and client-side updates.
 - **Apache Tomcat**: Web server that serves the application in the XAMPP environment.
@@ -39,12 +39,13 @@ To run **Life-Host** locally, follow the steps below:
 ### 3. Create the Database
 
 - Open **phpMyAdmin** (access it via `http://localhost/phpmyadmin` in your browser).
-- Create a new database named `life_host` for the application.
-- Import the SQL schema (if provided) or manually create the necessary tables for campaigns, donors, and donations.
+- Create a new database named `maindatabase` for the application.
+- Import the SQL schema (if provided) or manually create the necessary tables for `maintable(name,age,mail,phnumber,gender,adhar,pass)`,`requesttable(mailaddr,profile,rmessage,payment,paynumber,victim,aadhar,vnumber,vmessage,state)`.
 
 ### 4. Configure Database Connection
 
 - In the project folder, open `config.php` (or the relevant configuration file).
+- makesure the MySQL in running on port `3306`
 - Update the database connection settings with your local database credentials:
 
   ```php
